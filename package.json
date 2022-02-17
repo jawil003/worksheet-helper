@@ -2,7 +2,7 @@
   "name": "worksheet-creator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jawil003.github.io/worksheet-creator",
+  "homepage": "https://jawil003.github.io/worksheet-helper/",
   "dependencies": {
     "@heroicons/react": "^1.0.5",
     "@testing-library/jest-dom": "^5.14.1",
