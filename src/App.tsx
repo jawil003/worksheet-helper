@@ -2,7 +2,11 @@ import React from "react";
 import { IndexView } from "./views";
 
 function App() {
-  return <IndexView />;
+  return (
+    <div className="excel-bg">
+      <IndexView />
+    </div>
+  );
 }
 
 export default App;
