@@ -15,8 +15,17 @@
       "build/**/*",
       "node_modules/**/*"
     ],
+    "publish": [
+      "github"
+    ],
     "mac": {
       "category": "public.app-category.utilities",
+      "icon": "build/icon.png"
+    },
+    "win": {
+      "icon": "build/icon.png"
+    },
+    "linux": {
       "icon": "build/icon.png"
     }
   },
@@ -45,6 +54,9 @@
     "electron": "wait-on tcp:3000 && electron .",
     "package:mac": "electron-builder build --mac -c.extraMetadata.main=build/electron.js --publish never",
     "package:win": "electron-builder build --win -c.extraMetadata.main=build/electron.js --publish never",
+    "package:linux": "electron-builder build --l -c.extraMetadata.main=build/electron.js --publish never",
+    "package:all": "electron-builder build --mac --win --l -c.extraMetadata.main=build/electron.js --publish never",
+    "publish": "cross-env GH_TOKEN=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 electron-builder build --mac --win --l -c.extraMetadata.main=build/electron.js --publish always",
     "postinstall": "electron-builder install-app-deps",
     "preelectron-pack": "yarn build"
   },
@@ -76,6 +88,7 @@
     "autoprefixer": "^10.4.2",
     "concurrently": "^7.0.0",
     "craco": "^0.0.3",
+    "cross-env": "^7.0.3",
     "electron": "^17.0.1",
     "electron-builder": "^22.14.13",
     "postcss": "^8.4.6",
