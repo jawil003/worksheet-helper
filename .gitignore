@@ -26,3 +26,7 @@ deploy_key
 deploy_key.pub
 
 .env
+
+dist
+
+.idea

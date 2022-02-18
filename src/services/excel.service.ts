@@ -8,7 +8,7 @@ export default class ExcelService {
     const year = DateService.getCurrentYear();
     const month = DateService.getCurrentMonthName();
 
-    const sheet = workbook.addWorksheet(`worksheet-${month}-${year}`);
+    const sheet = workbook.addWorksheet(`${month} ${year}`);
 
     sheet.columns = [
       { header: "Wochentag", key: "weekday" },
