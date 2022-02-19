@@ -1,7 +1,7 @@
 {
   "name": "worksheet-helper",
   "description": "A helper for worksheet creation",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "public/electron.js",
   "author": "Jannik Will",
   "private": true,

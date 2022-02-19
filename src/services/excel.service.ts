@@ -57,6 +57,16 @@ export default class ExcelService {
 
     weekdayCol.values = [weekdayCol.header as string, ...weekdays];
 
+    const worktimeIs = sheet.getColumn("worktimeIs");
+
+    const worktimeIsValues: any[] = [];
+
+    for (let i = 2; i <= weekdays.length + 1; i++) {
+      worktimeIsValues.push({ formula: `F${i}-C${i}-G${i}`, date1904: false });
+    }
+
+    worktimeIs.values = [worktimeIs.header as string, ...worktimeIsValues];
+
     sheet.columns.forEach(function (column, i) {
       var maxLength = 0;
       column?.["eachCell"]?.({ includeEmpty: true }, function (cell) {
